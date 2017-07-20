@@ -1,0 +1,39 @@
+.row {
+  margin-bottom: 1%;
+}
+
+.key {
+  text-align: right;
+  font-size: 130%
+}
+
+.value {
+  text-align: left;
+}
+.progress {
+  background-color: #222222;
+}
+
+.progress-bar {
+  color: #222222;
+  height: 25px;
+  font-size: 150%;
+  padding-top: 3px;
+}
+
+.skill-category {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 5%;
+}
+
+.category-title h1{
+  color: #0275d8;
+  font-size: 250%;
+}
+
+hr {
+  opacity: 0.8;
+  background-color: aliceblue;
+}

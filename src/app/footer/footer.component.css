@@ -1,0 +1,14 @@
+hr {
+  opacity: 0.8;
+  background-color: aliceblue;
+}
+
+p {
+  color: #0275d8;
+}
+
+pre {
+  opacity: 0.8;
+  color: aliceblue;
+  text-align: center;
+}

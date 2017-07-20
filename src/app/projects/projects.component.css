@@ -1,0 +1,47 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 8%;
+}
+
+.card {
+  color: #0275d8;
+  background-color: #222222;
+  width: 50%;
+  margin-bottom: 2%;
+}
+
+.card-text {
+  text-align: justify;
+  color: #222222;
+}
+
+pre {
+  color: aliceblue;
+}
+
+.card-title {
+  color: #0275d8;
+  text-align: center;
+}
+
+a {
+  font-size: 200%;
+}
+
+.tags {
+  text-align: justify;
+}
+
+.tag {
+  margin: 1%;
+  font-size: 110%;
+}
+
+hr {
+  opacity: 0.8;
+  background-color: aliceblue;
+}
+
+.col-4 {
+  border-left: solid 1px rgba(240, 248, 255, 0.8);
+}

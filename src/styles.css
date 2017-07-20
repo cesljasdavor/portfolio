@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+body {
+  background-image: url("assets/icons/background.jpg");
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  font-family: Ubuntu;
+  cursor: pointer;
+}
+
+.spinner {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  animation: rotate 0.8s infinite linear;
+  border: 8px solid darkgray;
+  border-right-color: #0275d8;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.centered-container {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: scroll;
+}
+
+.title {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.title h1 {
+  font-size: 450%;
+  color: aliceblue;
+  opacity: 0.8;
+}
+
+.accordion-container {
+  width: 70%;
+}
+
+accordion {
+  color: #0275d8;
+  text-align: left;
+}
+
+.panel-heading {
+  background-color: #222222;
+  border-bottom: solid 1.25px rgba(240, 248, 255, 0.8);
+}
+
+.panel-heading:hover {
+  background-color: #0275d8;
+  color: aliceblue;
+}
+
+.panel-body {
+  background-color: #222222;
+  border: none;
+}
+
+.key {
+  font-weight: bold;
+  text-align: left;
+  font-size: 110%;
+}
+
+.value {
+  overflow: hidden;
+  color: #222222;
+  text-align: center;
+}
+
+pre {
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: Ubuntu;
+  font-size: 100%;
+}
+
+ul {
+  list-style-type: none;
+}

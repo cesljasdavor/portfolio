@@ -1,0 +1,37 @@
+<portfolio-header [title]="'Development skills'"></portfolio-header>
+
+<br>
+
+<!-- Dev data -->
+<div class="skill-category centered-container"
+     *ngFor="let skillCategory of skillCategories"
+     [@fadeAndUp]="skillCategory.scrollOpt.myScrollimation.currentState"
+     [scrollimate]="skillCategory.scrollOpt.myScrollimation">
+  <div class="category-title">
+    <h1 align="center"><b>{{skillCategory.categoryTitle}}</b></h1>
+  </div>
+
+  <hr>
+
+  <div *ngFor="let skill of skillCategory.skills">
+    <div class="row">
+      <div class="key col-5">
+        {{skill.title}}
+      </div>
+      <div class="value col-7">
+        <div class="progress">
+          <div class="progress-bar"
+               [ngClass]="determineClass(skill.description)"
+               role="progressbar"
+               [ngStyle]="{'width' : skill.description + '%'}"
+               attr.aria-valuenow="{{skill.description}}"
+               attr.aria-valuemin="0"
+               attr.aria-valuemax="100">{{skill.description + '%'}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>

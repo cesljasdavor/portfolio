@@ -1,0 +1,134 @@
+<portfolio-header [title]="'Curriculum vitae'"></portfolio-header>
+
+<!-- Photo -->
+<img [@fade] src="{{personalInfo.photo}}">
+<br>
+<!-- Download links -->
+<div [@fadeAndUp]="scrollOptions[0].myScrollimation.currentState"
+     [scrollimate]="scrollOptions[0].myScrollimation"
+     class="download-links"
+>
+  <a class="btn btn-lg btn-outline-primary"
+     href="../../assets/cv/CV_Davor_Cesljas_hr.pdf"
+     download>
+    Download croatian <span class="fa fa-file-pdf-o"></span>
+  </a>
+  <a class="btn btn-lg btn-outline-primary"
+     href="../../assets/cv/CV_Davor_Cesljas_en.pdf"
+     download>
+    Download english <span class="fa fa-file-pdf-o"></span>
+  </a>
+</div>
+
+<!-- Name and surname -->
+<h1 [@fadeAndUp]="scrollOptions[1].myScrollimation.currentState"
+    [scrollimate]="scrollOptions[1].myScrollimation"
+    class="name">{{personalInfo.firstName}}
+  {{personalInfo.lastName}}</h1>
+
+<!-- CV data -->
+<div [@fadeAndUp]="scrollOptions[2].myScrollimation.currentState"
+     [scrollimate]="scrollOptions[2].myScrollimation"
+     class="accordion-container centered-container">
+  <accordion [closeOthers]="true">
+    <accordion-group>
+      <div accordion-heading>
+        <h1 align="center"><b>Personal information</b></h1>
+      </div>
+      <div class="row">
+        <div class="key col-5">
+          Address
+        </div>
+        <div class="value col-7">
+          {{personalInfo.address}}
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="key col-5">
+          Telephone number
+        </div>
+        <div class="value col-7">
+          {{personalInfo.telephoneNumber}}
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="key col-5">
+          email
+        </div>
+        <div class="value col-7">
+          {{personalInfo.email}}
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="key col-5">
+          Gender
+        </div>
+        <div class="value col-7">
+          {{personalInfo.gender}}
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="key col-5">
+          Date of birth
+        </div>
+        <div class="value col-7">
+          {{personalInfo.dateOfBirth | date:"yMMMMd"}}
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="key col-5">
+          Citizenship
+        </div>
+        <div class="value col-7">
+          {{personalInfo.citizenship}}
+        </div>
+      </div>
+    </accordion-group>
+    <accordion-group>
+      <div accordion-heading>
+        <h1 align="center"><b>Education</b></h1>
+      </div>
+      <div *ngFor="let edu of education; let i = index">
+        <div class="row">
+          <div class="key col-5">
+            {{edu.title}}
+          </div>
+          <div class="value col-7">
+            <pre style="overflow: auto">{{edu.description}}</pre>
+            <div *ngIf="edu.courses !== undefined">
+              <ul *ngFor="let course of edu.courses; let i = index">
+                <li>
+                  <pre>{{course}}</pre>
+                </li>
+                <hr *ngIf="i < edu.courses.length - 1">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr *ngIf="i < education.length - 1">
+      </div>
+    </accordion-group>
+    <accordion-group>
+      <div accordion-heading>
+        <h1 align="center"><b>Personal skills</b></h1>
+      </div>
+      <div *ngFor="let skill of personalSkills; let i = index">
+        <div class="row">
+          <div class="key col-5">
+            {{skill.title}}
+          </div>
+          <div class="value col-7">
+            <pre style="overflow: auto">{{skill.description}}</pre>
+          </div>
+        </div>
+        <hr *ngIf="i < personalSkills.length - 1">
+      </div>
+    </accordion-group>
+  </accordion>
+</div>
+<br>

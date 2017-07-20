@@ -1,0 +1,31 @@
+<portfolio-header [title]="'Projects'"></portfolio-header>
+
+<div class="card centered-container"
+  *ngFor="let project of projects; let i = index"
+  [@projectAnimation]="scrollOptions[i].myScrollimation.currentState"
+  [scrollimate]="scrollOptions[i].myScrollimation">
+  <div class="card-block">
+    <h3 class="card-title"><pre class="card-title">{{project.name}}</pre></h3>
+    <hr>
+    <div class="row">
+      <div class="col-8">
+        <pre>{{project.description}}</pre>
+        <div class="tags">
+          <span *ngFor="let tag of project.tags" class="tag badge badge-pill badge-primary">{{tag}}</span>
+        </div>
+      </div>
+      <div class="col-4">
+        <a *ngIf="project.gitLink !== undefined && project.gitLink !== null"
+           class="btn btn-success"
+           href="{{project.gitLink}}">
+          <span class="fa fa-github"></span>
+        </a>
+        <a *ngIf="project.docLink !== undefined && project.docLink !== null"
+           class="btn btn-primary"
+           href="{{project.docLink}}">
+          <span class="fa fa-file-pdf-o"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

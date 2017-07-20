@@ -1,0 +1,42 @@
+<!-- Title -->
+<div [@fade] class="title">
+  <h1><b>{{name}}</b></h1>
+</div>
+
+<!-- links -->
+<div [@fade] class="links">
+  <a class="link" href="https://github.com/cesljasdavor"><span class="fa fa-github"></span></a>
+  <a class="link" href="https://gitlab.com/davor.cesljas"><span class="fa fa-gitlab"></span></a>
+  <a class="link" href="https://www.facebook.com/davor.cesljas"><span class="fa fa-facebook-official"></span></a>
+  <a class="link" href="https://www.linkedin.com/in/davor-%C4%8De%C5%A1lja%C5%A1-258522147/"><span class="fa fa-linkedin-square"></span></a>
+</div>
+
+<!-- Curriculum vitae -->
+<a [routerLink]="['/cv']">
+  <div [@cvAnimation]="cvScrollOpt.myScrollimation.currentState"
+       [scrollimate]="cvScrollOpt.myScrollimation"
+       id="cv"
+       class="card centered-container">
+    <h1 align="center">Curriculum vitae</h1>
+  </div>
+</a>
+
+<!-- Development skills -->
+<a [routerLink]="['/dev-skills']">
+  <div [@devSkillsAnimation]="devSkillsScrollOpt.myScrollimation.currentState"
+       [scrollimate]="devSkillsScrollOpt.myScrollimation"
+       id="dev-skills"
+       class="card centered-container">
+    <h1 align="center">Development skills</h1>
+  </div>
+</a>
+
+<!-- Projects -->
+<a [routerLink]="['/projects']">
+  <div [@projectsAnimation]="projectsScrollOpt.myScrollimation.currentState"
+       [scrollimate]="projectsScrollOpt.myScrollimation"
+       id="projects"
+       class="card centered-container">
+    <h1 align="center">Projects</h1>
+  </div>
+</a>

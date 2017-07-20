@@ -1,0 +1,12 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 8%;
+}
+
+.back-arrow {
+  float: inherit;
+  border-radius: 100%;
+  border: none;
+  margin-top: 1%;
+  font-size: 200%;
+}

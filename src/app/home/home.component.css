@@ -1,0 +1,53 @@
+.card {
+  width: 54%;
+  margin-bottom: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  color: azure;
+}
+
+.card:hover {
+  color: #0275d8;
+}
+
+#cv {
+  background-image: url("../../assets/icons/cv.jpg");
+  background-size: 100% 170%;
+}
+
+#dev-skills {
+  background-image: url("../../assets/icons/dev-skills.jpeg");
+  background-size: 100% 150%;
+}
+
+#projects {
+  background-image: url("../../assets/icons/projects.jpg");
+  background-size: 100% 150%;
+
+}
+
+.card h1 {
+  font-size: 350%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.links {
+  margin-bottom: 5%;
+}
+
+.link {
+  color: aliceblue;
+  opacity: 0.8;
+  font-size: 300%;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+}
+
+.link:hover {
+  opacity: 1;
+  color: #0275d8;
+}
